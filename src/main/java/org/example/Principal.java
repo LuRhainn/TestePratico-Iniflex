@@ -42,7 +42,7 @@ public class Principal
         System.out.println("-> 3.9 - Funcionário mais velho ");
         imprimirFuncionarioMaisVelho(funcionarios);
 
-        System.out.println("-> 3.10 - Funcionário mais velho ");
+        System.out.println("-> 3.10 - Funcionário por ordem alfabética ");
         imprimirOrdemAlfabetica(funcionarios);
 
         System.out.println("-> 3.11 - Salário total dos funcionários ");
@@ -144,7 +144,7 @@ public class Principal
     //Imprimir em ordem alfabetica
     private static void imprimirOrdemAlfabetica(List<Funcionario> funcionarios)
     {
-        funcionarios.stream().sorted(Comparator.comparing(Pessoa::getNome)).forEach(f -> System.out.println(f.getNome()));
+        funcionarios.stream().sorted(Comparator.comparing(Pessoa::getNome)).forEach(f -> System.out.println("Nome: " + f.getNome() + " | Nascimento: " + f.getDataNascimento().format(FORMATO_DATA) + " | Salário: R$ " + FORMATO_MOEDA.format(f.getSalario()) + " | Função: " + f.getFuncao()));
     }
 
     //Imprimir salarios totais
