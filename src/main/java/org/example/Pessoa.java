@@ -1,6 +1,5 @@
 package org.example;
 
-
 import java.time.LocalDate;
 import java.time.Period;
 
@@ -36,6 +35,6 @@ public class Pessoa
     //Pega a idade da pessoa usando data de nascimento e data atual do computador.
     public int getIdade()
     {
-        return  Period.between(dataNascimento, LocalDate.now()).getYears();
+        return Period.between(dataNascimento, LocalDate.now()).getYears();
     }
 }
