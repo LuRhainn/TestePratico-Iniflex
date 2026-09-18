@@ -1,4 +1,4 @@
-package org.example;
+package org.testepratico;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
